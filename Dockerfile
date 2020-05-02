@@ -1,12 +1,10 @@
-FROM alpine:3.9 as builder
+FROM python:3.8-slim-buster as builder
 
 RUN set -eux \
-	&& apk add --no-cache \
+	&& apt update \
+	&& apt install -y \
 		bc \
-		gcc \
-		musl-dev \
-		python3 \
-		python3-dev
+		gcc
 
 ARG VERSION=latest
 RUN set -eux \
@@ -18,11 +16,16 @@ RUN set -eux \
 	\
 	&& mypy --version | grep -E '^mypy\s[0-9]+' \
 	\
+	&& pip3 install --no-cache-dir \
+		lxml \
+	\
 	&& find /usr/lib/ -name '__pycache__' -print0 | xargs -0 -n1 rm -rf \
 	&& find /usr/lib/ -name '*.pyc' -print0 | xargs -0 -n1 rm -rf
 
+RUN set -eux && ls -lap /usr/lib
+RUN set -eux && ls -lap /usr/local/lib
 
-FROM alpine:3.9 as production
+FROM alpine:3 as production
 # https://github.com/opencontainers/image-spec/blob/master/annotations.md
 #LABEL "org.opencontainers.image.created"=""
 #LABEL "org.opencontainers.image.version"=""
@@ -41,9 +44,10 @@ LABEL "org.opencontainers.image.description"="mypy ${VERSION}"
 RUN set -eux \
 	&& apk add --no-cache python3 \
 	&& ln -sf /usr/bin/python3 /usr/bin/python \
+	&& ln -sf /usr/bin/python3 /usr/local/bin/python \
 	&& find /usr/lib/ -name '__pycache__' -print0 | xargs -0 -n1 rm -rf \
 	&& find /usr/lib/ -name '*.pyc' -print0 | xargs -0 -n1 rm -rf
-COPY --from=builder /usr/lib/python3.6/site-packages/ /usr/lib/python3.6/site-packages/
-COPY --from=builder /usr/bin/mypy /usr/bin/mypy
+COPY --from=builder /usr/local/lib/python3.8/site-packages/ /usr/lib/python3.8/site-packages/
+COPY --from=builder /usr/local/bin/mypy /usr/bin/mypy
 WORKDIR /data
 ENTRYPOINT ["mypy"]
