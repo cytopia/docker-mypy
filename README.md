@@ -61,7 +61,7 @@ The image is built nightly against multiple stable versions and pushed to Docker
 
 The following Docker image tags are rolling releases and are built and updated every night.
 
-[![nightly](https://github.com/cytopia/docker-pylint/workflows/nightly/badge.svg)](https://github.com/cytopia/docker-pylint/actions?query=workflow%3Anightly)
+[![nightly](https://github.com/cytopia/docker-mypy/workflows/nightly/badge.svg)](https://github.com/cytopia/docker-mypy/actions?query=workflow%3Anightly)
 
 | Docker tag | Build from |
 |------------|------------|
@@ -71,7 +71,7 @@ The following Docker image tags are rolling releases and are built and updated e
 
 The following Docker image tags are built once and can be used for reproducible builds. Its version never changes so you will have to update tags in your pipelines from time to time in order to stay up-to-date.
 
-[![build](https://github.com/cytopia/docker-pylint/workflows/build/badge.svg)](https://github.com/cytopia/docker-pylint/actions?query=workflow%3Abuild)
+[![build](https://github.com/cytopia/docker-mypy/workflows/build/badge.svg)](https://github.com/cytopia/docker-mypy/actions?query=workflow%3Abuild)
 
 | Docker tag      | Explanation |
 |-----------------|-------------|
