@@ -93,11 +93,11 @@ The following Docker image tags are built once and can be used for reproducible 
 | `latest-py3.7-<tag>`  | git: `<tag>` | latest       | **`3.7`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
 | `latest-py3.6-<tag>`  | git: `<tag>` | latest       | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
 |                       |              |              |             |                                              |
-| **`0-<tag>`**         | git: `<tag>` | **`1.x.x`**  | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.10-<tag>`      | git: `<tag>` | **`1.x.x`**  | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.9-<tag>`       | git: `<tag>` | **`1.x.x`**  | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.8-<tag>`       | git: `<tag>` | **`1.x.x`**  | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.6-<tag>`       | git: `<tag>` | **`1.x.x`**  | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| **`0-<tag>`**         | git: `<tag>` | **`0.x.x`**  | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.10-<tag>`      | git: `<tag>` | **`0.x.x`**  | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.9-<tag>`       | git: `<tag>` | **`0.x.x`**  | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.8-<tag>`       | git: `<tag>` | **`0.x.x`**  | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.6-<tag>`       | git: `<tag>` | **`0.x.x`**  | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
 
 > Where `<tag>` refers to the chosen git tag from this repository.
 
