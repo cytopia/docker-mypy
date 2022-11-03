@@ -1,15 +1,13 @@
 # Docker image for `mypy`
 
 [![Tag](https://img.shields.io/github/tag/cytopia/docker-mypy.svg)](https://github.com/cytopia/docker-mypy/releases)
-[![](https://images.microbadger.com/badges/version/cytopia/mypy:latest.svg?kill_cache=1)](https://microbadger.com/images/cytopia/mypy:latest "mypy")
-[![](https://images.microbadger.com/badges/image/cytopia/mypy:latest.svg?kill_cache=1)](https://microbadger.com/images/cytopia/mypy:latest "mypy")
-[![](https://img.shields.io/docker/pulls/cytopia/mypy.svg)](https://hub.docker.com/r/cytopia/mypy)
 [![](https://img.shields.io/badge/github-cytopia%2Fdocker--mypy-red.svg)](https://github.com/cytopia/docker-mypy "github.com/cytopia/docker-mypy")
 [![License](https://img.shields.io/badge/license-MIT-%233DA639.svg)](https://opensource.org/licenses/MIT)
 
 [![lint](https://github.com/cytopia/docker-mypy/workflows/lint/badge.svg)](https://github.com/cytopia/docker-mypy/actions?query=workflow%3Alint)
 [![build](https://github.com/cytopia/docker-mypy/workflows/build/badge.svg)](https://github.com/cytopia/docker-mypy/actions?query=workflow%3Abuild)
 [![nightly](https://github.com/cytopia/docker-mypy/workflows/nightly/badge.svg)](https://github.com/cytopia/docker-mypy/actions?query=workflow%3Anightly)
+
 
 > #### All [#awesome-ci](https://github.com/topics/awesome-ci) Docker images
 >
@@ -41,21 +39,20 @@
 > [yamlfmt][yfmt-git-lnk] **•**
 > [yamllint][ylint-git-lnk]
 
-> #### All [#awesome-ci](https://github.com/topics/awesome-ci) Makefiles
->
-> Visit **[cytopia/makefiles](https://github.com/cytopia/makefiles)** for seamless project integration, minimum required best-practice code linting and CI.
+View **[Dockerfiles](https://github.com/cytopia/docker-mypy/blob/master/Dockerfiles/)** on GitHub.
 
-View **[Dockerfile](https://github.com/cytopia/docker-mypy/blob/master/Dockerfile)** on GitHub.
 
-[![Docker hub](http://dockeri.co/image/cytopia/mypy?&kill_cache=1)](https://hub.docker.com/r/cytopia/mypy)
+**Available Architectures:**  `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`
 
 Tiny Alpine-based multistage-build dockerized version of [mypy](https://github.com/python/mypy)<sup>[1]</sup>.
 The image is built nightly against multiple stable versions and pushed to Dockerhub.
 
 <sup>[1] Official project: https://github.com/python/mypy</sup>
 
+## :whale: Available Docker image versions
 
-## Available Docker image versions
+[![](https://img.shields.io/docker/pulls/cytopia/mypy.svg)](https://hub.docker.com/r/cytopia/mypy)
+[![Docker](https://badgen.net/badge/icon/:latest?icon=docker&label=cytopia/mypy)](https://hub.docker.com/r/cytopia/mypy)
 
 #### Rolling releaess
 
@@ -63,9 +60,23 @@ The following Docker image tags are rolling releases and are built and updated e
 
 [![nightly](https://github.com/cytopia/docker-mypy/workflows/nightly/badge.svg)](https://github.com/cytopia/docker-mypy/actions?query=workflow%3Anightly)
 
-| Docker tag | Build from |
-|------------|------------|
-| `latest`   | Latest stable mypy version |
+
+| Docker Tag            | Git Ref      | mypy         | Python      | Available Architectures                      |
+|-----------------------|--------------|--------------|-------------|----------------------------------------------|
+| **`latest`**          | master       | latest       | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `latest-py3.10`       | master       | latest       | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `latest-py3.9`        | master       | latest       | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `latest-py3.8`        | master       | latest       | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `latest-py3.7`        | master       | latest       | **`3.7`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `latest-py3.6`        | master       | latest       | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+|                       |              |              |             |                                              |
+| **`0`**               | master       | **`0.x.x`**  | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.10`            | master       | **`0.x.x`**  | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.9`             | master       | **`0.x.x`**  | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.8`             | master       | **`0.x.x`**  | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.7`             | master       | **`0.x.x`**  | **`3.7`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.6`             | master       | **`0.x.x`**  | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+
 
 #### Point in time releases
 
@@ -73,18 +84,30 @@ The following Docker image tags are built once and can be used for reproducible 
 
 [![build](https://github.com/cytopia/docker-mypy/workflows/build/badge.svg)](https://github.com/cytopia/docker-mypy/actions?query=workflow%3Abuild)
 
-| Docker tag      | Explanation |
-|-----------------|-------------|
-| `latest-<TAG>`  | Latest stable version when this repository was git tagged |
+| Docker Tag            | Git Ref      | mypy       | Python      | Available Architectures                      |
+|-----------------------|--------------|--------------|-------------|----------------------------------------------|
+| **`latest-<tag>`**    | git: `<tag>` | latest       | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `latest-py3.10-<tag>` | git: `<tag>` | latest       | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `latest-py3.9-<tag>`  | git: `<tag>` | latest       | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `latest-py3.8-<tag>`  | git: `<tag>` | latest       | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `latest-py3.7-<tag>`  | git: `<tag>` | latest       | **`3.7`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `latest-py3.6-<tag>`  | git: `<tag>` | latest       | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+|                       |              |              |             |                                              |
+| **`0-<tag>`**         | git: `<tag>` | **`1.x.x`**  | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.10-<tag>`      | git: `<tag>` | **`1.x.x`**  | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.9-<tag>`       | git: `<tag>` | **`1.x.x`**  | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.8-<tag>`       | git: `<tag>` | **`1.x.x`**  | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| `0-py3.6-<tag>`       | git: `<tag>` | **`1.x.x`**  | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+
+> Where `<tag>` refers to the chosen git tag from this repository.
 
 
-## Docker mounts
+## :open_file_folder: Docker mounts
 
-The working directory inside the Docker container is **`/data/`** and should be mounted locally to
-the root of your project.
+The working directory inside the Docker container is **`/data/`** and should be mounted locally.
 
 
-## Usage
+## :computer: Usage
 
 ```bash
 # Linux, Mac, Windows (Powershell)
@@ -249,7 +272,8 @@ Visit **[cytopia/makefiles](https://github.com/cytopia/makefiles)** for dependen
 The provided Makefiles will only require GNU Make and Docker itself removing the need to install anything else.
 
 
-## License
+## :page_facing_up: License
+
 
 **[MIT License](LICENSE)**
 
