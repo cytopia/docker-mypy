@@ -161,14 +161,19 @@ _test-mypy-version:
 				| sort -V \
 				| tail -1 \
 		)"; \
+		if [ "${PYTHON_VERSION}" = "3.6" ]; then \
+			LATEST="0.971"; \
+		fi; \
 		echo "Testing for latest: $${LATEST}"; \
 		if ! docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version | grep -E "^mypy $${LATEST}"; then \
+			docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version; \
 			echo "Failed"; \
 			exit 1; \
 		fi; \
 	else \
 		echo "Testing for tag: $(MYPY_VERSION)"; \
 		if ! docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version | grep -E "^mypy $(MYPY_VERSION)[\.0-9]+"; then \
+			docker run --rm --platform $(ARCH) $(IMAGE):$(DOCKER_TAG) --version; \
 			echo "Failed"; \
 			exit 1; \
 		fi; \

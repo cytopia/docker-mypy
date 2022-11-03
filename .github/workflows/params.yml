@@ -24,12 +24,12 @@ env:
             "MYPY-latest  PYTHON-3.7",
             "MYPY-latest  PYTHON-3.6",
 
-            "MYPY-1  PYTHON-latest",
-            "MYPY-1  PYTHON-3.10",
-            "MYPY-1  PYTHON-3.9",
-            "MYPY-1  PYTHON-3.8",
-            "MYPY-1  PYTHON-3.7",
-            "MYPY-1  PYTHON-3.6"
+            "MYPY-0  PYTHON-latest",
+            "MYPY-0  PYTHON-3.10",
+            "MYPY-0  PYTHON-3.9",
+            "MYPY-0  PYTHON-3.8",
+            "MYPY-0  PYTHON-3.7",
+            "MYPY-0  PYTHON-3.6"
         ],
         "FLAVOUR": ["latest"],
         "ARCH":    ["linux/amd64", "linux/386", "linux/arm64", "linux/arm/v7", "linux/arm/v6"]
