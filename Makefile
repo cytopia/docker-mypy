@@ -16,6 +16,9 @@ include $(MAKEFILES)
 # Set default Target
 .DEFAULT_GOAL := help
 
+# Empty variable
+DOCKER_PULL_VARIABLES =
+
 
 # -------------------------------------------------------------------------------------------------
 # Default configuration

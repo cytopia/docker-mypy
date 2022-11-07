@@ -42,7 +42,7 @@
 View **[Dockerfiles](https://github.com/cytopia/docker-mypy/blob/master/Dockerfiles/)** on GitHub.
 
 
-**Available Architectures:**  `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`
+**Available Architectures:**  `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x`
 
 Tiny Alpine-based multistage-build dockerized version of [mypy](https://github.com/python/mypy)<sup>[1]</sup>.
 The image is built nightly against multiple stable versions and pushed to Dockerhub.
@@ -63,19 +63,19 @@ The following Docker image tags are rolling releases and are built and updated e
 
 | Docker Tag            | Git Ref      | mypy         | Python      | Available Architectures                      |
 |-----------------------|--------------|--------------|-------------|----------------------------------------------|
-| **`latest`**          | master       | latest       | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `latest-py3.10`       | master       | latest       | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `latest-py3.9`        | master       | latest       | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `latest-py3.8`        | master       | latest       | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `latest-py3.7`        | master       | latest       | **`3.7`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `latest-py3.6`        | master       | latest       | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| **`latest`**          | master       | latest       | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `latest-py3.10`       | master       | latest       | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `latest-py3.9`        | master       | latest       | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `latest-py3.8`        | master       | latest       | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `latest-py3.7`        | master       | latest       | **`3.7`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `latest-py3.6`        | master       | latest       | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 |                       |              |              |             |                                              |
-| **`0`**               | master       | **`0.x.x`**  | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.10`            | master       | **`0.x.x`**  | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.9`             | master       | **`0.x.x`**  | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.8`             | master       | **`0.x.x`**  | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.7`             | master       | **`0.x.x`**  | **`3.7`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.6`             | master       | **`0.x.x`**  | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| **`0`**               | master       | **`0.x.x`**  | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `0-py3.10`            | master       | **`0.x.x`**  | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `0-py3.9`             | master       | **`0.x.x`**  | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `0-py3.8`             | master       | **`0.x.x`**  | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `0-py3.7`             | master       | **`0.x.x`**  | **`3.7`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `0-py3.6`             | master       | **`0.x.x`**  | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 
 
 #### Point in time releases
@@ -86,18 +86,18 @@ The following Docker image tags are built once and can be used for reproducible 
 
 | Docker Tag            | Git Ref      | mypy       | Python      | Available Architectures                      |
 |-----------------------|--------------|--------------|-------------|----------------------------------------------|
-| **`latest-<tag>`**    | git: `<tag>` | latest       | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `latest-py3.10-<tag>` | git: `<tag>` | latest       | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `latest-py3.9-<tag>`  | git: `<tag>` | latest       | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `latest-py3.8-<tag>`  | git: `<tag>` | latest       | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `latest-py3.7-<tag>`  | git: `<tag>` | latest       | **`3.7`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `latest-py3.6-<tag>`  | git: `<tag>` | latest       | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| **`latest-<tag>`**    | git: `<tag>` | latest       | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `latest-py3.10-<tag>` | git: `<tag>` | latest       | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `latest-py3.9-<tag>`  | git: `<tag>` | latest       | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `latest-py3.8-<tag>`  | git: `<tag>` | latest       | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `latest-py3.7-<tag>`  | git: `<tag>` | latest       | **`3.7`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `latest-py3.6-<tag>`  | git: `<tag>` | latest       | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 |                       |              |              |             |                                              |
-| **`0-<tag>`**         | git: `<tag>` | **`0.x.x`**  | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.10-<tag>`      | git: `<tag>` | **`0.x.x`**  | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.9-<tag>`       | git: `<tag>` | **`0.x.x`**  | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.8-<tag>`       | git: `<tag>` | **`0.x.x`**  | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
-| `0-py3.6-<tag>`       | git: `<tag>` | **`0.x.x`**  | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6` |
+| **`0-<tag>`**         | git: `<tag>` | **`0.x.x`**  | latest      | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `0-py3.10-<tag>`      | git: `<tag>` | **`0.x.x`**  | **`3.10`**  | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `0-py3.9-<tag>`       | git: `<tag>` | **`0.x.x`**  | **`3.9`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `0-py3.8-<tag>`       | git: `<tag>` | **`0.x.x`**  | **`3.8`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
+| `0-py3.6-<tag>`       | git: `<tag>` | **`0.x.x`**  | **`3.6`**   | `amd64`, `i386`, `arm64`, `arm/v7`, `arm/v6`, `ppc64le`, `s390x` |
 
 > Where `<tag>` refers to the chosen git tag from this repository.
 
